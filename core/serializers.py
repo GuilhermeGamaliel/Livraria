@@ -1,7 +1,7 @@
 from dataclasses import fields
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Autor, Categoria, Editora, Livro
+from Livraria.core import Autor, Categoria, Editora, Livro
 
 
 class AutorSerializer(ModelSerializer):
