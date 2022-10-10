@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
-from Livraria.core import Editora
+from core.models import Editora
 from core.serializers import EditoraSerializer
 
 

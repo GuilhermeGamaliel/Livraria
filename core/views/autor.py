@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
-from Livraria.core import Autor
+from core.models import Autor
 from core.serializers import AutorSerializer
 
 

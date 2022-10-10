@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from Livraria.core import Autor, Categoria, Editora, Livro
+from core.models import Categoria
 
 
 class CategoriaSerializer(ModelSerializer):
