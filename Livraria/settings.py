@@ -1,4 +1,5 @@
 import os
+import environ
 
 """
 Django settings for Livraria project.
@@ -28,6 +29,16 @@ SECRET_KEY = 'django-insecure-w3636v1#z04)9^2!v(%so)ivhv-i27h27-)(j5le_-vnw8qid=
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
+
+# Carrega as variáveis de ambiente do sistema operacional e as prepara para usá-las
+env = environ.Env()
+environ.Env.read_env((os.path.join(BASE_DIR, '.env')))
+
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = env('DEBUG')
+ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
+DATABASES = {'default': env.db()}
 
 
 # Application definition
